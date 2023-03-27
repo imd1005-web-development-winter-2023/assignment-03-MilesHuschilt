@@ -1,10 +1,4 @@
-/*
-  CSS File
-*/
 
-/*
- VARIABLES
-*/
 :root {
   /* Core colours */
   /* https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557 */
@@ -14,12 +8,17 @@
   --colour-wedgewood: #457b9d;
   --colour-cello: #1d3557;
 
+  --colour-darkblue: #2D5E75; 
+  --colour-lightblue: #70A7C2; 
+
   /* Header configuration */
   --header-heading-colour: var(--colour-peppermint);
 
   /* Body configuration */
-  --body-default-colour: var(--colour-cello);
-  --body-background-colour: var(--colour-peppermint);
+ 
+  /* background-image: url(vertical_treasure_map.jpg); */ 
+  background-color: var(--colour-cello);
+ 
 }
 
 /*
@@ -33,10 +32,119 @@ body {
 
 main {
   min-height: 100vh;
-
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Used to establish the pirate font */ 
+@font-face { 
+  font-family: Pirate_Font; 
+  src: url(Pirate_Font.TTF); 
+}
+
+.top {
+ display: flex; 
+ margin-top: -400px;
+ margin-left: 150px; 
+ font-size: 35px; 
+ align-items: center;
+ font-family: Pirate_Font; 
+ justify-content: space-between;
+ align-items: center;
+ text-align: center;
+ padding: 30px; 
+}
+
+.top h2 {
+  font-size: 25px;
+}
+
+.inputStuff {
+ display: flex; 
+ justify-content: center;
+ font-family:Georgia, 'Times New Roman', Times, serif; 
+ font-size: 25px;
+ font-weight: 800;
+ 
+}
+
+.inputStuff form {
+  margin-top: 20px;
+}
+
+.inputStuff button {
+  padding: 10px; 
+  font-size: 30px;
+margin-top: 10px;
+margin-left:20px; 
+
+}
+
+.the_targ {
+  display: flex; 
+  justify-content: center;
+
+  font-family:Georgia, 'Times New Roman', Times, serif; 
+  margin-top: 30px; 
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.the_targ button {
+  padding: 5px; 
+  margin-left: 20px;
+}
+
+.TargetName { 
+  /* Creates an outline for the text*/
+  text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+}
+
+.InputText {
+  border-color: #15262e;
+  border-width: 5px;
+  background-color:#a8dadc;
+  
+} 
+
+.subBut {
+  border: None; 
+  background-image: linear-gradient( #2D5E75, #70A7C2);
+  color:aliceblue;;
+  background-image: linear-gradient( #457b9d, #1d3557);
+  font-family: Georgia, 'Times New Roman', Times, serif; 
+  border-radius: 20px;
+}
+
+.subBut:hover{
+  background-image: linear-gradient( #648596, #15262e);
+}
+
+.TargLi {
+  position: absolute; 
+  margin-top: 100px; 
+  margin-left: 100px; 
+
+}
+
+li{
+  
+  font-size: 30px;
+  text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+}
+
+.TargLi button {
+  border: None; --colour-wedgewood: 
+  background-image: linear-gradient( #2D5E75, #70A7C2);
+  color:aliceblue;;
+  background-image: linear-gradient( #457b9d, #1d3557);
+  font-family: Georgia, 'Times New Roman', Times, serif; 
+  border-radius: 20px;
+}
+
+.TargLi button:hover {
+  background-image: linear-gradient( #648596, #15262e);
 }
 
 /*
@@ -52,4 +160,11 @@ main {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+}
+
+.background {
+  position: absolute; 
+  margin-top: -190px;
+  margin-left: 100px;
+  z-index: -1; /* Sends the the map to the bottom layer */ 
 }
