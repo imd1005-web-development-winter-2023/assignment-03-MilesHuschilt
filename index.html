@@ -17,9 +17,14 @@
     <link rel="stylesheet" href="style.css" />
 
     <!-- Set the Favicon  -->
-    <link rel="icon" href="./images/favicon/rocket.svg" type="image/svg+xml" />
+    <link rel="icon" href="jolly_roger.png" type="image/svg+xml" />
   </head>
+
+   <!-- all of the elements located at the top of the screen  -->
+  
+
   <body>
+
     <!--
 
       ADD YOUR ASSIGNMENT 03 CODE
@@ -29,14 +34,65 @@
       IMPORTANT CHECKLIST:
 
       - Are users able to create and delete to do list items?
-      - Have you set a favicon? (included - but it's a rocket)
+      - Have you set a favicon? (included - but it's a rocket)  (DONE!!!!) 
       - Do you have a css reset file? (included)
       - Has a team member conducted a code review and left a GitHub Issue in your repo?
       - Have you conducted a code review and left a GitHub Issue on your team member's repo?
 
     -->
     <main>
+      <section class = "list">
+      
+        <!-- creates the title, the logo and the piece of text to the side  -->
+        <div class = top>
+          <img class = "jolly_roger" width = 150 src="jolly_roger.png" alt="Picture of the Jolly Roger">
+          <h1> Bounty Hunter List </h1>
+          <h2> Trying to bring justice to the Seven Seas? <br> We've got you covered, <br> Keep track of your bounty's <br> with this handy tool</h2>
+        </div>
+      
+        <!-- the background  -->
+        <div class = background>
+          <img class = "map" width = 1000 src="treasure_map.jpg" alt="Picture of the treasure map">
+        </div>
+      
+      
+        <!-- This class keeps track of the label, the input form and the button that submits the form  -->
+        <div class = inputStuff> 
+        
+         <form id="TargetForm">
+      
+            <label class="TargetName" > Target's Name: </label> 
+
+            <input type="text" id="Target" class="InputText" name="targ" placeholder="Enter Target Here..." /> 
+           
+            <button type="submit" id="SubmitButton" class="subBut"> Submit </button> 
+      
+         </form>
+      
+         <!-- makes the class of all of the targets  -->
+         <ol class = TargLi id="Target_List"> </ol>
+         
+         <button type="submit" id="Delete" class = "delbut" hidden> Delete ❌❌❌ </button>
+      
+      </div>
+      
+
+       <!-- <div class = "the_targ">
+      
+          <div class = "Target_Actions"></div>
+      
+            <input type="text" class="text" value= "my_target" readonly />
+         
+        <button type="Captured" id="Capture_Button"> Captured </button>
+        <button type="Delete" id="Delete_Button"> Delete </button>
+      
+      </div>
+      </div> --> 
+
       <div id="app"></div>
+
+    </section>
+
     </main>
 
     <!-- This is where we add our awesome JavaScript code -->
