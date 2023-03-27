@@ -50,13 +50,14 @@ console.log(event.target.tagName);
   if (event.target.tagName === "BUTTON" ) {
    // console.log("delbut id"+DeleteButton.id); 
     console.log("deleted: ");
-    event.target.parentNode.remove(); 
+    event.target.parentNode.remove();
   }
 
   if (event.target.tagName === "TYPE") {
     console.log("checked: ");
-    event.target.name = "✅";
-   // event.target.parentNode.strike(); 
+   // event.target.name = "✅";
+
+    event.target.parentNode.classList.toggle("✅");
   }
 
 
@@ -72,10 +73,11 @@ const target = document.createElement('span'); // creates a text span to display
 target.textContent = name;
 CapturedList.appendChild(target);
 
-const CaptureButton = document.createElement("type", "checkbox"); // creates the Captured button and adds it to the list
-CaptureButton.id = "CapBut";
-CaptureButton.textContent = "⚔️";
-CapturedList.appendChild(CaptureButton); 
+const Capture = document.createElement("input"); // creates the Captured input and adds it to the list
+Capture.setAttribute("type","checkbox");
+
+Capture.textContent = "⚔️";
+CapturedList.appendChild(Capture); 
 
 const DeleteButton = document.createElement("button"); 
 DeleteButton.id = "DelBut";
